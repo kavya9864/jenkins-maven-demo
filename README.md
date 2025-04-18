@@ -1,95 +1,110 @@
-# jenkins-maven-demo
 # Jenkins Maven Demo 🚀
 
-A simple Java HelloWorld application built using Maven and integrated with Jenkins for CI/CD demonstration.
+This project demonstrates how to set up a **Jenkins Freestyle job** to build a simple **Java Maven HelloWorld** application as part of a CI/CD pipeline.
 
+---
 
- This project is part of a hands-on exercise to set up Jenkins on an AWS EC2 instance and automate the build process using Freestyle jobs.
+## 🛠 Tools Used
+- **Jenkins** (installed on AWS EC2)
+- **Java JDK 11**
+- **Apache Maven**
+- **Git & GitHub**
+- **Ubuntu EC2 Instance**
 
 ---
 
 ## 📁 Project Structure
 
-
-jenkins-maven-demo/ ├── src/ │ └── main/ │ └── java/ │ └── HelloWorld.java ├── pom.xml └── README.md
-
-
----
-
-## 🔧 Technologies Used
-
-- Java 11  
-- Apache Maven  
-- Jenkins 2.440.1  
-- AWS EC2 (Ubuntu)  
-- Git & GitHub  
-- MobaXterm (for SSH access)
-
-![jenkins](https://github.com/user-attachments/assets/b66053a2-e8c4-4b04-ad11-9797dcfb286a)
-
----
-
-## ⚙️ Jenkins Setup & Build Steps
-
-1. **Launch Jenkins on AWS EC2**
-   - Installed Jenkins via terminal
-   - Opened Jenkins on `http://<ec2-ip>:8080`
-     
-
-2. **Install Required Jenkins Plugins**
-   - Git Plugin  
-   - Maven Integration Plugin
-
-3. **Create a Freestyle Project**
-   - Job Name: `maven-build-demo`
-   - Source Code Management: Git
-     - Repo: `https://github.com/kavya9864/jenkins-maven-demo.git`
-   - Build Environment:
-     - Maven build step: `clean install`
-
-4. **Run the Build**
-   - Triggered a manual build
-   - Output: Successful Maven build
-
-![success](https://github.com/user-attachments/assets/7cbfce9d-df10-4ef3-bcf0-002ace8c0fff)
-
-
-
-![hello world](https://github.com/user-attachments/assets/b683113b-dd21-4b2b-9c31-84cd06e90b03)
-
----
-
-## 📸 Recommended Screenshots
-
-> Include these in your project repo or any presentation/doc:
-
-1. ✅ Jenkins Freestyle Job Configuration screen  
-2. ✅ Successful Jenkins Console Output (Build #)  
-3. ✅ GitHub repository showing the project files  
-4. ✅ EC2 instance terminal showing `git pull`, `git push`, and build logs  
-5. ✅ `HelloWorld.java` output or structure  
-6. ✅ Jenkins dashboard with build history for the project  
-
----
-
-## 👋 Output
-
-The expected build output in Jenkins should contain:
-
-
-
-[INFO] Building jar: /path-to/target/hello-java-maven-1.0-SNAPSHOT.jar [INFO] BUILD SUCCESS
+jenkins-maven-demo/ ├── pom.xml ├── README.md └── src/ └── main/ └── java/ └── HelloWorld.java
 
 
 ---
 
-## 📌 Author
+## ✅ Steps Performed
 
-- GitHub: [@kavya9864](https://github.com/kavya9864)
+### 1. Setup Jenkins on AWS EC2
+- Created a new **Ubuntu EC2 instance** on AWS.
+- Installed Java, Maven, and Jenkins manually (via `jenkins.war`).
+- Ran Jenkins using:
+  ```bash
+  nohup java -jar jenkins.war > jenkins.log 2>&1 &
 
----
 
-## 🔗 Repo URL
+Accessed Jenkins via: http://<your-ec2-public-ip>:8080
 
-[https://github.com/kavya9864/jenkins-maven-demo](https://github.com/kavya9864/jenkins-maven-demo)
+📸 Screenshot: Jenkins welcome screen after initial setup
+
+![jwp](https://github.com/user-attachments/assets/d344da52-f0f6-4adf-9917-82053355abcd)
+
+2. Created Java Maven Project
+Wrote a simple HelloWorld.java file under src/main/java/HelloWorld.java:
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello from Jenkins Maven Demo!");
+    }
+}
+
+Created a pom.xml with basic Maven configuration to build the project.
+
+
+3. Setup GitHub Repository
+Repo name: jenkins-maven-demo
+
+Added all project files:
+git init
+git remote add origin https://github.com/kavya9864/jenkins-maven-demo.git
+git add .
+git commit -m "Initial commit"
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+
+📸 Add Screenshot: GitHub repo with committed files
+4. Configured Jenkins Freestyle Job
+Created a Freestyle project in Jenkins named maven-build-demo.
+
+Configured:
+
+Git repo URL
+
+Build step: mvn clean install
+
+Built the job.
+
+
+📸 Add Screenshot: Jenkins job config and build console output
+
+
+
+✅ Outputs to Include
+Jenkins Freestyle job name: maven-build-demo
+
+Screenshot of successful Jenkins build
+
+Screenshot of the GitHub repo with all files pushed
+
+Screenshot showing HelloWorld.java structure or contents
+
+Screenshot of Jenkins Console Output showing successful Maven build
+
+
+
+💡 What You Learned
+How to run Jenkins on an EC2 instance
+
+How to set up and push a Maven Java app to GitHub
+
+How to configure a Jenkins Freestyle job to build a Maven app
+
+How to troubleshoot Jenkins errors like port conflicts, and Git push/pull issues
+
+📎 Links
+GitHub Repo: jenkins-maven-demo
+
+👩‍💻 Author
+kavya9864
+
+
+
+
+
 
