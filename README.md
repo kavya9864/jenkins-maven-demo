@@ -81,9 +81,16 @@ Built the job.
 
 ![success](https://github.com/user-attachments/assets/dfcc32d2-2e9e-42f9-9d3d-8b1c7675058e)
 
+---
+
+### 📦 Jenkins Build Artifacts
+
+Below is the screenshot showing successful Maven build and artifact archiving in Jenkins:
+
+![artifacts](https://github.com/user-attachments/assets/4599c0f3-2f39-4887-9304-678638604323)
 
 
-
+---
 ✅ Outputs to Include
 Jenkins Freestyle job name: maven-build-demo
 
@@ -93,6 +100,43 @@ Screenshot showing HelloWorld.java structure or contents
 
 
 ![git push](https://github.com/user-attachments/assets/d9327274-70c9-4f60-8104-5ddb24151bc4)
+---
+
+
+# ✅ Step 4: JUnit Test Integration in Jenkins
+
+This step shows how to integrate **JUnit tests** into your Jenkins Maven build and verify test execution.
+
+---
+
+## 📌 Files and Content
+
+### 1. `HelloWorld.java`
+
+Located in: `src/main/java/`
+
+java
+public class HelloWorld {
+    public String sayHello() {
+        return "Hello, World!";
+    }
+
+    public static void main(String[] args) {
+        HelloWorld app = new HelloWorld();
+        System.out.println(app.sayHello());
+    }
+}
+pom.xml Updates
+
+🧪 Run the Test
+
+mvn test
+
+![JUnit test ran](https://github.com/user-attachments/assets/c082cff7-a80f-47ad-9e70-6060e0ddc052)
+
+---
+
+## 📁 File Structure Created
 
 
 💡 What You Learned
@@ -103,7 +147,7 @@ How to set up and push a Maven Java app to GitHub
 How to configure a Jenkins Freestyle job to build a Maven app
 
 How to troubleshoot Jenkins errors like port conflicts, and Git push/pull issues
-
+-----
 📎 Links
 GitHub Repo: [jenkins-maven-demo](https://github.com/kavya9864/jenkins-maven-demo)
 
