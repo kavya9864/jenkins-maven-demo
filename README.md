@@ -105,7 +105,7 @@ How to configure a Jenkins Freestyle job to build a Maven app
 How to troubleshoot Jenkins errors like port conflicts, and Git push/pull issues
 
 📎 Links
-GitHub Repo: jenkins-maven-demo
+GitHub Repo: [jenkins-maven-demo](https://github.com/kavya9864/jenkins-maven-demo)
 
 👩‍💻 Author
 kavya9864
