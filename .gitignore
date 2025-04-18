@@ -1,0 +1,18 @@
+# Ignore Jenkins-related directories and logs
+.jenkins/
+jenkins.log
+jenkins.war
+
+# Ignore system files
+.Xauthority
+.bash_history
+.bash_logout
+.bashrc
+.cache/
+.config/
+.java/
+.m2/
+.profile
+.ssh/
+.sudo_as_admin_successful
+.wget-hsts
