@@ -11,6 +11,9 @@ This project demonstrates how to set up a **Jenkins Freestyle job** to build a s
 - **Git & GitHub**
 - **Ubuntu EC2 Instance**
 
+
+![jenkins](https://github.com/user-attachments/assets/f9149975-6e15-4ae9-b530-a7e2bb00361d)
+
 ---
 
 ## 📁 Project Structure
@@ -58,7 +61,10 @@ git commit -m "Initial commit"
 git pull origin main --allow-unrelated-histories
 git push -u origin main
 
-📸 Add Screenshot: GitHub repo with committed files
+📸 Added Screenshot: GitHub repo with committed files
+
+![git](https://github.com/user-attachments/assets/d406f1dc-401e-4eba-943c-59e493fb2c96)
+
 4. Configured Jenkins Freestyle Job
 Created a Freestyle project in Jenkins named maven-build-demo.
 
@@ -71,21 +77,22 @@ Build step: mvn clean install
 Built the job.
 
 
-📸 Add Screenshot: Jenkins job config and build console output
+📸 Screenshot: Jenkins job config and build console output
+
+![success](https://github.com/user-attachments/assets/dfcc32d2-2e9e-42f9-9d3d-8b1c7675058e)
+
 
 
 
 ✅ Outputs to Include
 Jenkins Freestyle job name: maven-build-demo
 
-Screenshot of successful Jenkins build
-
-Screenshot of the GitHub repo with all files pushed
-
 Screenshot showing HelloWorld.java structure or contents
 
-Screenshot of Jenkins Console Output showing successful Maven build
+![hello world](https://github.com/user-attachments/assets/b7b8af88-fed6-4e0a-9751-ccf534febc3b)
 
+
+![git push](https://github.com/user-attachments/assets/d9327274-70c9-4f60-8104-5ddb24151bc4)
 
 
 💡 What You Learned
